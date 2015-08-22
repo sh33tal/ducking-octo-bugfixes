@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>http://localhost:1313/</link>
+    <link>http://sh33tal.github.io/github.io/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 02 Nov 2014 09:14:00 -0700</lastBuildDate>
@@ -233,48 +233,6 @@ Introduction&lt;/p&gt;
 &lt;p&gt;Demo: Automation with MSBuild&lt;/p&gt;
 
 &lt;p&gt;When it comes to automation, MSBuild is a very powerful tool for automating a lot of the tasks that we have to do when it comes to building our project, testing our project, and even deploying our project. So first of all, let&amp;rsquo;s look at a simple MSBuild project file and go through some of the properties that it has. Here at the top there&amp;rsquo;s a PropertyGroup where I&amp;rsquo;m defining what my output path will be and also the name of the project, because I use the same template for many different ClickToBuild projects. Then within here, I&amp;rsquo;ve got a target named DebugBuild, which is simply going to do a Clean and a Build on my project using its project name and using the Debug configuration. One of the things that makes MSBuild very powerful as a build tool is the fact that it supports dependencies between these various tasks or targets, and so the next target is called BuildAndTest, which depends on DebugBuild and then it&amp;rsquo;s going to do an Nunit call to run my Unit Test, and then another Nunit call to run my Integration Test. Then I have a ReleaseBuild that depends on BuildAndTest being successful and it just does a Clean and a Build in Release mode now of my project. And lastly, if I want to Deploy, I can use this Deploy target, which depends on ReleaseBuild, so it will only work if all my tests pass and my ReleaseBuild is complete. And it will copy my output to the Deploy, whatever path I&amp;rsquo;ve set for that Deploy path. So if we look at this folder, let me pull it up here. So if we look at this folder, we can see that we have our Build.proj file, as well as a ClickToBuild and a Build.bat. Let me show you those real quick. ClickTobuild simply calls Build.bat with the ReleaseBuild target being passed in and then it pauses, which is going to require me to press Enter in order for the window to disappear. And Build.bat simply calls MSBuild and passes in the Build.proj and the /t parameter, which is for specifying the target with whatever gets passed into it. So with all that, I can now come in here to my project and I can run ClickToBuild and we can watch it execute. And see that it succeeded. So what this did is it ran our Build with the DebugBuild doing a Clean and then a Build. Next, it ran our Unit Test, and then it finally ran the Integration Test and then the ReleaseBuild as well. I don&amp;rsquo;t have enough room in the buffer to show you all of that. We could pipe this of something if we wanted to see it, but you can see that it all ran with one click. And the nice thing about this is if I extract this out from SourceControl and then just run it, in this particular application I&amp;rsquo;m having to use a Northwind database that would need to be set up, but assuming that Northwind was set up on the local host of whatever computer I was on, this should work. Now if you&amp;rsquo;re grabbing this sample file yourself and trying to run it, that&amp;rsquo;s the one thing you&amp;rsquo;re going to have to do is set up Northwind on your database and run the SQL Script that&amp;rsquo;s there as well, and then this should work for you as well, as long as you have Northwind and .NET 4 installed. ClickToDeploy, if we look at what this is doing, as you might expect it&amp;rsquo;s simply going to call that same Build.bat file, but now it&amp;rsquo;s going to pass in Deploy and we&amp;rsquo;ll see that this produces an output of our application. So when we run ClickToDeploy, it&amp;rsquo;s going to do everything the other one did including running our Unit Tests and Integration Tests and when it&amp;rsquo;s finished you can see that we now have a Deploy Folder, and in our Deploy Folder we have our application, built in Release mode, that we can go ahead and run and see that it works. So that&amp;rsquo;s an example of showing how you can automate your process of compiling and testing your application using MSBuild. The next step would be to have this happen automatically whenever you do a check-in and it&amp;rsquo;s something that you can do easily with Microsoft&amp;rsquo;s Team Foundation Server or with third-party tools such as Jetbrains, TeamCity or CruiseControl.net.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Doing Beats Talking, Most of the Time</title>
-      <link>http://localhost:1313/post/doing-beats-talking-most-of-the-time/</link>
-      <pubDate>Sat, 27 Jul 2013 10:53:03 -0700</pubDate>
-      
-      <guid>http://localhost:1313/post/doing-beats-talking-most-of-the-time/</guid>
-      <description>&lt;p&gt;It has been a while since I last posted. I have no excuses; I simply have a good reason.&lt;/p&gt;
-
-&lt;p&gt;I was &lt;em&gt;too busy&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been working on very exciting projects so that work consumed my time and energy enough that I didn&amp;rsquo;t have time to &lt;em&gt;talk&lt;/em&gt; about all what I was doing.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m still working on the same exciting things. But wait! I&amp;rsquo;m still here aren&amp;rsquo;t I? I felt the need to come back and do something different (but still something &lt;em&gt;quick&lt;/em&gt;). So here is a completely free to use wallpaper with an appropriate quote from none other than myself. Or could it be possible that someone else said that before I did and I just don&amp;rsquo;t know? Nonsense!&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m sure you all agree that this is priceless? That&amp;rsquo;s why I&amp;rsquo;m not putting a price on it. You are free to use, modify and pretty much do anything you&amp;rsquo;d like with this as long as you give me the credit and it fits under the terms of the &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34;&gt;Creative Commons Attribution-NonCommercial 3.0 Unported License &lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pick your version:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/alexnormand/9380273987/&#34;&gt;My Alex special edit version&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://flickr.com/gp/alexnormand/tk78YE&#34;&gt;Full size, with quote&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://flickr.com/gp/alexnormand/kQ53in&#34;&gt;Full size, no quote&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-&lt;figure class=&#34;full&#34;&gt;
-    &lt;a href=&#34;http://www.flickr.com/photos/alexnormand/9380273987/&#34;&gt;
-        &lt;img src=&#34;http://farm4.staticflickr.com/3731/9380273987_eaceb6ea69_h_d.jpg&#34;  /&gt;
-    &lt;/a&gt;
-    
-    &lt;figcaption&gt;
-        Doing Beats Talking, Right?
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-&lt;/p&gt;
 </description>
     </item>
     
@@ -923,6 +881,48 @@ I am however having a real hard time not having friends.&lt;/p&gt;
 &lt;p&gt;Well, that&amp;rsquo;s because Alexandre can&amp;rsquo;t be pronounced correctly in English. That&amp;rsquo;s okay, I can&amp;rsquo;t pronounce anything correctly in English.&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s a very climatic opening isn&amp;rsquo;t it? I feel pretty good about this. I think I actually have something good here for a first post. I just have to make sure I&amp;rsquo;m not screwing up the ending (TODO: review that last paragraph before posting).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Doing Beats Talking, Most of the Time</title>
+      <link>http://localhost:1313/post/doing-beats-talking-most-of-the-time/</link>
+      <pubDate>Sun, 27 Jul 2003 10:53:03 -0700</pubDate>
+      
+      <guid>http://localhost:1313/post/doing-beats-talking-most-of-the-time/</guid>
+      <description>&lt;p&gt;It has been a while since I last posted. I have no excuses; I simply have a good reason.&lt;/p&gt;
+
+&lt;p&gt;I was &lt;em&gt;too busy&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been working on very exciting projects so that work consumed my time and energy enough that I didn&amp;rsquo;t have time to &lt;em&gt;talk&lt;/em&gt; about all what I was doing.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m still working on the same exciting things. But wait! I&amp;rsquo;m still here aren&amp;rsquo;t I? I felt the need to come back and do something different (but still something &lt;em&gt;quick&lt;/em&gt;). So here is a completely free to use wallpaper with an appropriate quote from none other than myself. Or could it be possible that someone else said that before I did and I just don&amp;rsquo;t know? Nonsense!&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m sure you all agree that this is priceless? That&amp;rsquo;s why I&amp;rsquo;m not putting a price on it. You are free to use, modify and pretty much do anything you&amp;rsquo;d like with this as long as you give me the credit and it fits under the terms of the &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34;&gt;Creative Commons Attribution-NonCommercial 3.0 Unported License &lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pick your version:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/alexnormand/9380273987/&#34;&gt;My Alex special edit version&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://flickr.com/gp/alexnormand/tk78YE&#34;&gt;Full size, with quote&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://flickr.com/gp/alexnormand/kQ53in&#34;&gt;Full size, no quote&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+&lt;figure class=&#34;full&#34;&gt;
+    &lt;a href=&#34;http://www.flickr.com/photos/alexnormand/9380273987/&#34;&gt;
+        &lt;img src=&#34;http://farm4.staticflickr.com/3731/9380273987_eaceb6ea69_h_d.jpg&#34;  /&gt;
+    &lt;/a&gt;
+    
+    &lt;figcaption&gt;
+        Doing Beats Talking, Right?
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/p&gt;
 </description>
     </item>
     
