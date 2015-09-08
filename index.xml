@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>https://sh33tal.github.io/github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 12 Jun 2015 05:20:03 +0000</lastBuildDate>
-    <atom:link href="https://sh33tal.github.io/github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hey, it&#39;s a Start</title>
-      <link>https://sh33tal.github.io/github.io/post/hey-its-a-start/</link>
+      <link>http://localhost:1313/post/hey-its-a-start/</link>
       <pubDate>Fri, 12 Jun 2015 05:20:03 +0000</pubDate>
       
-      <guid>https://sh33tal.github.io/github.io/post/hey-its-a-start/</guid>
+      <guid>http://localhost:1313/post/hey-its-a-start/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SOLID Principles</title>
-      <link>https://sh33tal.github.io/github.io/post/Solid-Principles/</link>
+      <link>http://localhost:1313/post/Solid-Principles/</link>
       <pubDate>Sun, 02 Nov 2014 09:14:00 -0700</pubDate>
       
-      <guid>https://sh33tal.github.io/github.io/post/Solid-Principles/</guid>
+      <guid>http://localhost:1313/post/Solid-Principles/</guid>
       <description>&lt;p&gt;The Single Responsibility Principle&lt;/p&gt;
 
 &lt;p&gt;Definition&lt;/p&gt;
@@ -247,10 +247,10 @@ Introduction&lt;/p&gt;
     
     <item>
       <title>Doing Beats Talking, Most of the Time</title>
-      <link>https://sh33tal.github.io/github.io/post/doing-beats-talking-most-of-the-time/</link>
+      <link>http://localhost:1313/post/doing-beats-talking-most-of-the-time/</link>
       <pubDate>Sat, 27 Jul 2013 10:53:03 -0700</pubDate>
       
-      <guid>https://sh33tal.github.io/github.io/post/doing-beats-talking-most-of-the-time/</guid>
+      <guid>http://localhost:1313/post/doing-beats-talking-most-of-the-time/</guid>
       <description></description>
     </item>
     
