@@ -5,8 +5,17 @@
     <link>http://localhost:1313/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 12 Jun 2015 05:20:03 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2015 10:53:03 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Doing Beats Talking, Most of the Time</title>
+      <link>http://localhost:1313/post/doing-beats-talking-most-of-the-time/</link>
+      <pubDate>Mon, 27 Jul 2015 10:53:03 -0700</pubDate>
+      
+      <guid>http://localhost:1313/post/doing-beats-talking-most-of-the-time/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hey, it&#39;s a Start</title>
@@ -243,15 +252,6 @@ Introduction&lt;/p&gt;
 
 &lt;p&gt;When it comes to automation, MSBuild is a very powerful tool for automating a lot of the tasks that we have to do when it comes to building our project, testing our project, and even deploying our project. So first of all, let&amp;rsquo;s look at a simple MSBuild project file and go through some of the properties that it has. Here at the top there&amp;rsquo;s a PropertyGroup where I&amp;rsquo;m defining what my output path will be and also the name of the project, because I use the same template for many different ClickToBuild projects. Then within here, I&amp;rsquo;ve got a target named DebugBuild, which is simply going to do a Clean and a Build on my project using its project name and using the Debug configuration. One of the things that makes MSBuild very powerful as a build tool is the fact that it supports dependencies between these various tasks or targets, and so the next target is called BuildAndTest, which depends on DebugBuild and then it&amp;rsquo;s going to do an Nunit call to run my Unit Test, and then another Nunit call to run my Integration Test. Then I have a ReleaseBuild that depends on BuildAndTest being successful and it just does a Clean and a Build in Release mode now of my project. And lastly, if I want to Deploy, I can use this Deploy target, which depends on ReleaseBuild, so it will only work if all my tests pass and my ReleaseBuild is complete. And it will copy my output to the Deploy, whatever path I&amp;rsquo;ve set for that Deploy path. So if we look at this folder, let me pull it up here. So if we look at this folder, we can see that we have our Build.proj file, as well as a ClickToBuild and a Build.bat. Let me show you those real quick. ClickTobuild simply calls Build.bat with the ReleaseBuild target being passed in and then it pauses, which is going to require me to press Enter in order for the window to disappear. And Build.bat simply calls MSBuild and passes in the Build.proj and the /t parameter, which is for specifying the target with whatever gets passed into it. So with all that, I can now come in here to my project and I can run ClickToBuild and we can watch it execute. And see that it succeeded. So what this did is it ran our Build with the DebugBuild doing a Clean and then a Build. Next, it ran our Unit Test, and then it finally ran the Integration Test and then the ReleaseBuild as well. I don&amp;rsquo;t have enough room in the buffer to show you all of that. We could pipe this of something if we wanted to see it, but you can see that it all ran with one click. And the nice thing about this is if I extract this out from SourceControl and then just run it, in this particular application I&amp;rsquo;m having to use a Northwind database that would need to be set up, but assuming that Northwind was set up on the local host of whatever computer I was on, this should work. Now if you&amp;rsquo;re grabbing this sample file yourself and trying to run it, that&amp;rsquo;s the one thing you&amp;rsquo;re going to have to do is set up Northwind on your database and run the SQL Script that&amp;rsquo;s there as well, and then this should work for you as well, as long as you have Northwind and .NET 4 installed. ClickToDeploy, if we look at what this is doing, as you might expect it&amp;rsquo;s simply going to call that same Build.bat file, but now it&amp;rsquo;s going to pass in Deploy and we&amp;rsquo;ll see that this produces an output of our application. So when we run ClickToDeploy, it&amp;rsquo;s going to do everything the other one did including running our Unit Tests and Integration Tests and when it&amp;rsquo;s finished you can see that we now have a Deploy Folder, and in our Deploy Folder we have our application, built in Release mode, that we can go ahead and run and see that it works. So that&amp;rsquo;s an example of showing how you can automate your process of compiling and testing your application using MSBuild. The next step would be to have this happen automatically whenever you do a check-in and it&amp;rsquo;s something that you can do easily with Microsoft&amp;rsquo;s Team Foundation Server or with third-party tools such as Jetbrains, TeamCity or CruiseControl.net.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Doing Beats Talking, Most of the Time</title>
-      <link>http://localhost:1313/post/doing-beats-talking-most-of-the-time/</link>
-      <pubDate>Sat, 27 Jul 2013 10:53:03 -0700</pubDate>
-      
-      <guid>http://localhost:1313/post/doing-beats-talking-most-of-the-time/</guid>
-      <description></description>
     </item>
     
   </channel>
