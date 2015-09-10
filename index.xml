@@ -19,16 +19,6 @@
     </item>
     
     <item>
-      <title>Hey, it&#39;s a Start</title>
-      <link>http://localhost:1313/post/hey-its-a-start/</link>
-      <pubDate>Fri, 12 Jun 2015 05:20:03 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/hey-its-a-start/</guid>
-      <description>&lt;p&gt;test&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>SOLID Principles</title>
       <link>http://localhost:1313/post/Solid-Principles/</link>
       <pubDate>Sun, 02 Nov 2014 09:14:00 -0700</pubDate>
