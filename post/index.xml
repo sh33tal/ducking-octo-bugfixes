@@ -5,18 +5,8 @@
     <link>http://sh33tal.github.io/post/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 27 Jul 2015 10:53:03 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 02 Nov 2014 09:14:00 -0700</lastBuildDate>
     <atom:link href="http://sh33tal.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Doing Beats Talking, Most of the Time</title>
-      <link>http://sh33tal.github.io/post/doing-beats-talking-most-of-the-time/</link>
-      <pubDate>Mon, 27 Jul 2015 10:53:03 -0700</pubDate>
-      
-      <guid>http://sh33tal.github.io/post/doing-beats-talking-most-of-the-time/</guid>
-      <description>&lt;p&gt;Is this change picjed up&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>SOLID Principles</title>
@@ -243,67 +233,6 @@ Introduction&lt;/p&gt;
 &lt;p&gt;Demo: Automation with MSBuild&lt;/p&gt;
 
 &lt;p&gt;When it comes to automation, MSBuild is a very powerful tool for automating a lot of the tasks that we have to do when it comes to building our project, testing our project, and even deploying our project. So first of all, let&amp;rsquo;s look at a simple MSBuild project file and go through some of the properties that it has. Here at the top there&amp;rsquo;s a PropertyGroup where I&amp;rsquo;m defining what my output path will be and also the name of the project, because I use the same template for many different ClickToBuild projects. Then within here, I&amp;rsquo;ve got a target named DebugBuild, which is simply going to do a Clean and a Build on my project using its project name and using the Debug configuration. One of the things that makes MSBuild very powerful as a build tool is the fact that it supports dependencies between these various tasks or targets, and so the next target is called BuildAndTest, which depends on DebugBuild and then it&amp;rsquo;s going to do an Nunit call to run my Unit Test, and then another Nunit call to run my Integration Test. Then I have a ReleaseBuild that depends on BuildAndTest being successful and it just does a Clean and a Build in Release mode now of my project. And lastly, if I want to Deploy, I can use this Deploy target, which depends on ReleaseBuild, so it will only work if all my tests pass and my ReleaseBuild is complete. And it will copy my output to the Deploy, whatever path I&amp;rsquo;ve set for that Deploy path. So if we look at this folder, let me pull it up here. So if we look at this folder, we can see that we have our Build.proj file, as well as a ClickToBuild and a Build.bat. Let me show you those real quick. ClickTobuild simply calls Build.bat with the ReleaseBuild target being passed in and then it pauses, which is going to require me to press Enter in order for the window to disappear. And Build.bat simply calls MSBuild and passes in the Build.proj and the /t parameter, which is for specifying the target with whatever gets passed into it. So with all that, I can now come in here to my project and I can run ClickToBuild and we can watch it execute. And see that it succeeded. So what this did is it ran our Build with the DebugBuild doing a Clean and then a Build. Next, it ran our Unit Test, and then it finally ran the Integration Test and then the ReleaseBuild as well. I don&amp;rsquo;t have enough room in the buffer to show you all of that. We could pipe this of something if we wanted to see it, but you can see that it all ran with one click. And the nice thing about this is if I extract this out from SourceControl and then just run it, in this particular application I&amp;rsquo;m having to use a Northwind database that would need to be set up, but assuming that Northwind was set up on the local host of whatever computer I was on, this should work. Now if you&amp;rsquo;re grabbing this sample file yourself and trying to run it, that&amp;rsquo;s the one thing you&amp;rsquo;re going to have to do is set up Northwind on your database and run the SQL Script that&amp;rsquo;s there as well, and then this should work for you as well, as long as you have Northwind and .NET 4 installed. ClickToDeploy, if we look at what this is doing, as you might expect it&amp;rsquo;s simply going to call that same Build.bat file, but now it&amp;rsquo;s going to pass in Deploy and we&amp;rsquo;ll see that this produces an output of our application. So when we run ClickToDeploy, it&amp;rsquo;s going to do everything the other one did including running our Unit Tests and Integration Tests and when it&amp;rsquo;s finished you can see that we now have a Deploy Folder, and in our Deploy Folder we have our application, built in Release mode, that we can go ahead and run and see that it works. So that&amp;rsquo;s an example of showing how you can automate your process of compiling and testing your application using MSBuild. The next step would be to have this happen automatically whenever you do a check-in and it&amp;rsquo;s something that you can do easily with Microsoft&amp;rsquo;s Team Foundation Server or with third-party tools such as Jetbrains, TeamCity or CruiseControl.net.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Uncertainties</title>
-      <link>http://sh33tal.github.io/post/uncertainties/</link>
-      <pubDate>Sun, 02 Nov 2014 09:14:00 -0700</pubDate>
-      
-      <guid>http://sh33tal.github.io/post/uncertainties/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>What Can Happen in a Second?</title>
-      <link>http://sh33tal.github.io/post/what-can-happen-in-a-second/</link>
-      <pubDate>Thu, 09 Aug 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://sh33tal.github.io/post/what-can-happen-in-a-second/</guid>
-      <description>&lt;p&gt;&lt;em&gt;I stumbled upon a book last weekend that caught my attention. It&amp;rsquo;s called &lt;a href=&#34;http://www.amazon.com/Things-Journal-Francisco-Writers-Grotto/dp/1452105448&#34;&gt;642 Things to Write About&lt;/a&gt;. It contains 642 prompts for things to write about. Simple. With a clearly defined scope, creativity flourishes. If you know me, you know how I like this sort of thing.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This post is my take on the first prompt of the book: What Can Happen in a Second? I just wrote without thinking too much about it.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Others might follow. Or not. I haven&amp;rsquo;t read the second prompt yet. I will. But I&amp;rsquo;m shipping this one first.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;
-&lt;figure class=&#34;full&#34;&gt;
-    &lt;a href=&#34;http://500px.com/photo/11156255&#34;&gt;
-        &lt;img src=&#34;http://ppcdn.500px.org/11156255/cef93067bbb9d90935631a9ddfb7819cf694fd41/4.jpg&#34;  /&gt;
-    &lt;/a&gt;
-    
-    &lt;figcaption&gt;
-        The Patience of a Lonely Boat, shot by me on an old Nikon FE2 with a fantastic Velvia 50. Doesn&amp;#39;t it serve as a good illustration for the slow passage of time?
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s an interesting question and not and an easy one to find answers to. It turns out that in our human world, not much can happen in a second. That may be counterintuitive for some. It just sounds right to our ears to hear that some big thing happened in a split second.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s dramatic.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;That accident occurred in a split second.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;From one second to the next, everything went from great to chaos.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What&amp;rsquo;s interesting about those examples is that they really are not things that happened in a second. If you stop and think about it, in most cases, an accident had been in gestation for several seconds, minutes, hours, days. Sensationalism and big drama makes us report it otherwise. That, however, can be a rant for some other day.&lt;/p&gt;
-
-&lt;p&gt;Let me share this personal story. A story you might know about.&lt;/p&gt;
-
-&lt;p&gt;There was this moment last year when my life took a turn. I had received an invitation for a job recruitment event in Montreal for a position on the United States West Coast. I was not really considering relocating but my wife said: &amp;ldquo;&lt;em&gt;Why not?&lt;/em&gt;&amp;rdquo;. Indeed, why not? At that moment, I started steering towards that new path. The horizon opened. You could argue that this change occurred at that second. I disagree. I think I had been contemplating the idea for some time. This idea was far-fetched, unrealistic. But that moment when that question triggered important and new answers was important not in itself, but as a tipping point in a series of events, experiences, reflections.&lt;/p&gt;
-
-&lt;p&gt;When I say that not much happens in a second, that&amp;rsquo;s what I&amp;rsquo;m referring to. There&amp;rsquo;s that decisive moment that breaks the &lt;em&gt;before&lt;/em&gt; and &lt;em&gt;after&lt;/em&gt; and we&amp;rsquo;re tempted to think it all happened &lt;em&gt;right then&lt;/em&gt; but I believe the reality is different.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m sure we pass by such moments everyday because we&amp;rsquo;re not in the right mindset (which is quite alright too). As much as big drama seems to feed on split seconds twists, it&amp;rsquo;s often all the little moments that make a big one possible.&lt;/p&gt;
-
-&lt;p&gt;So, what can happen in one second? Millions of computations? Several frames in a video? Thousands of tweets? Yes, yes, yes and yes.&lt;/p&gt;
-
-&lt;p&gt;But when we’re talking about stories, there’s always more hidden behind that instant of drama.&lt;/p&gt;
 </description>
     </item>
     
