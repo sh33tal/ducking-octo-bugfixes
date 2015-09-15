@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
-    <link>http://sh33tal.github.io/post/</link>
+    <link>http://www.hetal-patel.com/post/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 02 Nov 2014 09:14:00 -0700</lastBuildDate>
-    <atom:link href="http://sh33tal.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.hetal-patel.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>SOLID Principles</title>
-      <link>http://sh33tal.github.io/post/Solid-Principles/</link>
+      <link>http://www.hetal-patel.com/post/Solid-Principles/</link>
       <pubDate>Sun, 02 Nov 2014 09:14:00 -0700</pubDate>
       
-      <guid>http://sh33tal.github.io/post/Solid-Principles/</guid>
+      <guid>http://www.hetal-patel.com/post/Solid-Principles/</guid>
       <description>&lt;p&gt;The Single Responsibility Principle&lt;/p&gt;
 
 &lt;p&gt;Definition&lt;/p&gt;
