@@ -1,0 +1,9 @@
+.brand {  
+  background-color: #EFC5BF;
+  display: block;  
+  max-width: auto;  
+  padding-bottom: 1em;
+}
+.content h1{
+  font-family: sans-serif;
+}
