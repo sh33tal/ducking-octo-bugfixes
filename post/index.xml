@@ -189,7 +189,7 @@ d.Add(t3, &amp;quot;this is Tuple t3&amp;quot;);
       <guid>http://sh33tal.github.io/post/Solid-Principles/</guid>
       <description>
 
-&lt;p&gt;Having been a database developer I was accustomed to programming in a procedural languages. when I took up programming in C# I was never sure how good Object Orientated code should look. I could get the job done but was my code easy to maintain, flexible for change and so on. I was pointed to the SOLID principles. I found these principles particular useful as my team are TDD evangelists. I am going to share my learning in this blog.&lt;/p&gt;
+&lt;p&gt;Having been a database developer I was accustomed to programming in a procedural languages. When I took up programming in C# I was never sure how good Object Orientated code should look. I could get the job done but was my code easy to maintain, flexible for change and so on? I was pointed to the SOLID principles. I found these principles particular useful as my team are TDD evangelists. I am going to share my learning in this blog.&lt;/p&gt;
 
 &lt;h3 id=&#34;the-single-responsibility-principle:eb77c95d8ae22b8fdfb4ecb24c6cc8b5&#34;&gt;The Single Responsibility Principle&lt;/h3&gt;
 
