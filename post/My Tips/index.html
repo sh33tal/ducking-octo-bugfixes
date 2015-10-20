@@ -46,7 +46,7 @@
        <div class="post content">
         
 
-<h3 id="the-null-coalescing-operator:644a264f609cf3d22e9b5a9bc20636f4">The Null Coalescing operator</h3>
+<h3 id="the-null-coalescing-operator:8c701ccd430ccd5232bee19927928047">The Null Coalescing operator</h3>
 
 <p>The null-coalescing operator can simplify our If statements when we need to check for the existence of a null value and provide some other default. If we don&rsquo;t use the null-coalescing operator, we typically end up with If statements that look something like this.</p>
 
@@ -69,7 +69,7 @@
 
 <p>Here, we set a name and then we want to get a result. What we want is if the name is not null then to just use the name. Otherwise, use this default string. The ?? here signify the null-coalescing operator.</p>
 
-<h3 id="testing-char-unicode-validity:644a264f609cf3d22e9b5a9bc20636f4">Testing char Unicode validity</h3>
+<h3 id="testing-char-unicode-validity:8c701ccd430ccd5232bee19927928047">Testing char Unicode validity</h3>
 
 <p>It&rsquo;s useful to check whether a character is valid or not. To do this, we can use the static GetUnicodeCharacter method of the char struct. To use this method, we pass in a char and we get back a category. To test whether the character is valid, we check this Category is not equal to the OtherNotAssigned category.</p>
 
@@ -93,7 +93,7 @@
 
 <p>The category that we&rsquo;ve got is the OtherNotAssigned category and isValidUnicode is now false. So the GetUnicodeCategory method is a useful one whenever we&rsquo;re dealing with Unicode conversions that may fall outside of the valid set of Unicode values. Unicode categories include other useful things. We can find out whether the categories are currency symbols, enclosing marks, letter number separators, punctation, and a category such as uppercase letters.</p>
 
-<h3 id="creating-random-numbers:644a264f609cf3d22e9b5a9bc20636f4">Creating random numbers</h3>
+<h3 id="creating-random-numbers:8c701ccd430ccd5232bee19927928047">Creating random numbers</h3>
 
 <p>When we create a new random instance without specifying a seed value, it uses the current system time as the seed value. Because the system clock is limited in its level granularity, if we create two random instances close together, they may be initialized with the same seed value and hence will produce the same sequence of numbers. in the example below I&rsquo;ve created two random instances, r1 and r2, and then I simply generated 5 numbers from that random instance. I&rsquo;ve then done the same thing again, but for the r2 instance.</p>
 
@@ -139,7 +139,7 @@
 
 <p>This will produce a better random sequence. The first five numbers here are different from the second five numbers here and this is because we&rsquo;re just using one instance of the random class. If you needed to generate random numbers between method calls then you could have a static random instance that&rsquo;s used by multiple methods.</p>
 
-<h3 id="using-tuples-to-reduce-code:644a264f609cf3d22e9b5a9bc20636f4">Using Tuples to reduce code</h3>
+<h3 id="using-tuples-to-reduce-code:8c701ccd430ccd5232bee19927928047">Using Tuples to reduce code</h3>
 
 <p>Tuples are generic classes that we can use to hold sets of values of potentially different types. There&rsquo;s a couple of different ways we can create tuples. The first is to simply use the constructor. Below I&rsquo;m creating a single element tuple using the new keyword specifying the type of int and giving it a value for the int.</p>
 
@@ -214,7 +214,7 @@
 
 <p>The tuples appear in their sorted order. When sorting tuples, the first element is compared. If they are different, then that gives us our sort order. However, if they&rsquo;re the same, then we compare the next element in the tuple. If these are the same, then we&rsquo;d compare the next, and so on.</p>
 
-<h3 id="simplify-constructor-overloads:644a264f609cf3d22e9b5a9bc20636f4">Simplify constructor overloads</h3>
+<h3 id="simplify-constructor-overloads:8c701ccd430ccd5232bee19927928047">Simplify constructor overloads</h3>
 
 <p>Sometimes when we&rsquo;re writing our own classes, we want to provide a number of different overloads for the constructor. Doing so creates some flexibility in how the calling code creates one of the objects.
 In the code below, the Person class has three different overloads.</p>
@@ -292,7 +292,7 @@ p3 has the age, gender, and name that we passed.</p>
 
 <p>Chaining of constructors is a way that we can remove some redundant code.</p>
 
-<h3 id="static-array-methods:644a264f609cf3d22e9b5a9bc20636f4">Static Array Methods</h3>
+<h3 id="static-array-methods:8c701ccd430ccd5232bee19927928047">Static Array Methods</h3>
 
 <p>I&rsquo;ve got an array of names</p>
 
@@ -301,7 +301,7 @@ p3 has the age, gender, and name that we passed.</p>
 
 <p>There are a number of static methods of the Array class.</p>
 
-<h4 id="make-an-array-readonly:644a264f609cf3d22e9b5a9bc20636f4">Make an array ReadOnly</h4>
+<h4 id="make-an-array-readonly:8c701ccd430ccd5232bee19927928047">Make an array ReadOnly</h4>
 
 <p>If we ever need to provide a read-only view of an array, we can use the Array.AsReadOnly method. This method simply takes an array and returns a ReadOnlyCollection.</p>
 
@@ -313,7 +313,7 @@ p3 has the age, gender, and name that we passed.</p>
     }
 </code></pre>
 
-<h4 id="finding-items-in-an-array:644a264f609cf3d22e9b5a9bc20636f4">Finding items in an array</h4>
+<h4 id="finding-items-in-an-array:8c701ccd430ccd5232bee19927928047">Finding items in an array</h4>
 
 <p>To find the index of an item in the array, we can use the BinarySearchmethod or FindIndex method</p>
 
@@ -324,21 +324,21 @@ p3 has the age, gender, and name that we passed.</p>
 
 <p>If there are no matches, then we get a -1 returned. If there&rsquo;s more than one match, we get the index of the first matching item.</p>
 
-<h4 id="existence-of-items-in-an-array:644a264f609cf3d22e9b5a9bc20636f4">Existence of items in an array</h4>
+<h4 id="existence-of-items-in-an-array:8c701ccd430ccd5232bee19927928047">Existence of items in an array</h4>
 
 <p>Use the Array.Exists method.</p>
 
 <pre><code>        bool isDuncanThere = Array.Exists(names, x =&gt; x == &quot;Duncan&quot;);
 </code></pre>
 
-<h4 id="find-the-last-instance:644a264f609cf3d22e9b5a9bc20636f4">Find the last instance</h4>
+<h4 id="find-the-last-instance:8c701ccd430ccd5232bee19927928047">Find the last instance</h4>
 
 <p>Use the Array.FindLastmethod.</p>
 
 <pre><code>        string lastBryant = Array.FindLast(names, x =&gt; x.StartsWith(&quot;Bryant&quot;));
 </code></pre>
 
-<h4 id="iterate-over-an-array:644a264f609cf3d22e9b5a9bc20636f4">Iterate over an array</h4>
+<h4 id="iterate-over-an-array:8c701ccd430ccd5232bee19927928047">Iterate over an array</h4>
 
 <p>Use theArray.ForEach method. This takes an array and an action to be performed for each element in the array.</p>
 
@@ -349,14 +349,14 @@ p3 has the age, gender, and name that we passed.</p>
                      });
 </code></pre>
 
-<h4 id="sort-an-array:644a264f609cf3d22e9b5a9bc20636f4">Sort an array</h4>
+<h4 id="sort-an-array:8c701ccd430ccd5232bee19927928047">Sort an array</h4>
 
 <p>Use the Array.Sort method.</p>
 
 <pre><code>        Array.Sort(names);
 </code></pre>
 
-<h4 id="test-all-elements-in-the-array-satisfy-some-condition:644a264f609cf3d22e9b5a9bc20636f4">Test all elements in the array satisfy some condition.</h4>
+<h4 id="test-all-elements-in-the-array-satisfy-some-condition:8c701ccd430ccd5232bee19927928047">Test all elements in the array satisfy some condition.</h4>
 
 <p>Use the Array.TrueForAllmethod. This takes an array and a predicate that we&rsquo;re testing for.</p>
 
@@ -365,7 +365,7 @@ p3 has the age, gender, and name that we passed.</p>
 
 <p>This returns false because not every element satisfies the predicate.</p>
 
-<h4 id="reverse-an-array:644a264f609cf3d22e9b5a9bc20636f4">Reverse an array</h4>
+<h4 id="reverse-an-array:8c701ccd430ccd5232bee19927928047">Reverse an array</h4>
 
 <p>Use Array.Reverse method to reverse the items in the array.</p>
 
@@ -374,7 +374,7 @@ p3 has the age, gender, and name that we passed.</p>
 
 <p>When we&rsquo;re working with arrays, there&rsquo;s a number of different ways we can copy</p>
 
-<h4 id="copying-arrays:644a264f609cf3d22e9b5a9bc20636f4">Copying arrays</h4>
+<h4 id="copying-arrays:8c701ccd430ccd5232bee19927928047">Copying arrays</h4>
 
 <p>Use instance Clone method.
 The Clone method returns an object, so we have to cast to an array of strings.</p>
@@ -426,7 +426,7 @@ When using the Clone method with value types, we get a copy of each value.</p>
 
 <p>We can see that Ewing in the original array points to the same place in memory as the copied Ewing because we&rsquo;re dealing with strings in this example, which are reference types.</p>
 
-<h5 id="converting-arrays:644a264f609cf3d22e9b5a9bc20636f4">Converting Arrays</h5>
+<h5 id="converting-arrays:8c701ccd430ccd5232bee19927928047">Converting Arrays</h5>
 
 <p>To convert an array of one type to an array of a different type, we can use the array ConvertAllstatic method.</p>
 
@@ -437,7 +437,7 @@ When using the Clone method with value types, we get a copy of each value.</p>
 
 <p>Each integer will be converted to a BigInteger. The resulting array now contains three BigIntegers, 1, 2, and 3.</p>
 
-<h5 id="constrainedcopy:644a264f609cf3d22e9b5a9bc20636f4">ConstrainedCopy</h5>
+<h5 id="constrainedcopy:8c701ccd430ccd5232bee19927928047">ConstrainedCopy</h5>
 
 <p>If we want to perform a copy from one array to another, but we want to ensure that the entire copy either succeeds or fails in an atomic fashion, we can use the array ConstrainedCopy method. This method takes the Source array and the start element of the Source array followed by the Destinationarray and the Destination element to start at and the number of elements we want to copy.</p>
 
@@ -468,7 +468,7 @@ When using the Clone method with value types, we get a copy of each value.</p>
 
 <p>Again, we get an exception, but this time if we look at ourDestination array, we can see that the first element is no longer &ldquo;Julius&rdquo; and that&rsquo;s because ConstrainedCopywill either copy all elements successfully or it will roll back the initial state of the Destination array.</p>
 
-<h3 id="converting-base-types-to-byte-arrays:644a264f609cf3d22e9b5a9bc20636f4">Converting base types to byte arrays</h3>
+<h3 id="converting-base-types-to-byte-arrays:8c701ccd430ccd5232bee19927928047">Converting base types to byte arrays</h3>
 
 <p>If we&rsquo;re working with some of the base types in C#, we can make use of the BitConverter class to convert these to and from arrays of byte values. Sometimes this is useful if we need to get binary representations of values. The BitConverter class contains a static GetByte method.
 BitConverter.GetByte
