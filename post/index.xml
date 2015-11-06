@@ -480,7 +480,7 @@ So the BitConverter class allows us to get the byte values for some of the basic
       <guid>http://sh33tal.github.io/post/Solid-Principles/</guid>
       <description>
 
-&lt;p&gt;I want to document things that I have learnt as during my journey from database developer to web developer. One of the most useful and  intersting principle that I have learnt is SOLID. The ultimate aim of SOLID is to produce maintable, flexible and testable code. SOLID encourages a more Object Orientated style preventing code from becoming a mess and hard to debug and extend. I found these principles particular useful as my team are TDD evangelists. I am going to share my learning in this blog.&lt;/p&gt;
+&lt;p&gt;I want to document things that I have learnt during my journey from database developer to web developer. One of the most useful and  intersting principles that I have learnt is SOLID. The ultimate aim of SOLID is to produce maintainable, flexible and testable code. SOLID encourages a more Object Orientated style of programming, preventing code from becoming a mess and hard to debug and extend. I found these principles particular useful as my team are TDD evangelists. I am going to share my learning in this blog.&lt;/p&gt;
 
 &lt;h3 id=&#34;the-single-responsibility-principle:eb77c95d8ae22b8fdfb4ecb24c6cc8b5&#34;&gt;The Single Responsibility Principle&lt;/h3&gt;
 
